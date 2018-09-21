@@ -82,5 +82,13 @@ text = r.recognize_ibm(audio, username='b1c2ce4f-1420-4f49-82c5-ed73cfb320ec', p
 ![03](/img/2018-09-21-03.jpg) //[]内可以任意取名，()内即为图片路径
 {% endhighlight %}
 
-
+修改字体
+* 在本地仓库的css文件夹下存放着main.scss文件。应该是修改全局样式的配置文件。对其进行修改。
+{% highlight js%}
+//修改前
+base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+//修改后
+base-font-family: "Times New Roman",Georgia;
+{% endhighlight %}
 
