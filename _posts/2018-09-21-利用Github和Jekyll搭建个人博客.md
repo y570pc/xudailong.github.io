@@ -2,71 +2,85 @@
 layout: post
 title:  "利用Github和Jekyll搭建个人博客"
 categories: 网站搭建
-tags: Github Jekyll 
+tags: Jekyll markdown 
 author: y570pc
 ---
 
 * content
 {:toc}
 
-## Fork https://github.com/xudailong/xudailong.github.io（博客模板）到我的仓库（repository）
+## 站在巨人的肩膀上
+Fork [xudailong.github.io](https://github.com/xudailong/xudailong.github.io)（博客模板）到我的仓库（repository）。
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
+![01](/img/2018-09-21-01.jpg)
+
+到我的对应仓库，点击Settings，rename仓库名。
+
+![02](/img/2018-09-21-02.jpg)
+
+## 本地编辑
+将仓库文件copy到本地。
+
+{% highlight js%}
+git clone https://github.com/y570pc/y570pc.github.io
+{% endhighlight %}
+
+其中本地_posts文件夹下的md文件即为创建的博文，用mardown语言编写而成。显然md文件的编写难度远小于html文件的编写难度。而Jekyll可将md文件转变成html文件。
+
+将本地文件push到github仓库
+{% highlight js%}
+git commit -m "message”
+git push -u origin master
+{% endhighlight %}
+
+## 搭建本地调试环境
+1. 安装Ruby 
+2. 安装RubyGems
+3. 用RubyGems安装Jekyll
+4. 开启服务器，jekyll serve
+5. 浏览器访问http://localhost:4001/ 
+
+## 样式微调
+代码高亮
+* 安装pygments
+{% highlight ruby%}
+gem install pygments.rb
+{% endhighlight %}
+
+* 修改配置文件_config.yml
+{% highlight js%}
+//修改前
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
+//修改后
+markdown: kramdown
+highlighter: pygments
+{% endhighlight %}
+
+* md文件实现代码高亮的语法
+![03](/img/2018-09-21-03.jpg)
+
+* 显示效果
+{% highlight python%}
+import speech_recognition as sr
+r = sr.Recognizer()
+harvard = sr.AudioFile('harvard.wav')
+with harvard as source:
+    audio =r.record(source)
+text = r.recognize_ibm(audio, username='b1c2ce4f-1420-4f49-82c5-ed73cfb320ec', password='BMLcTYAuPCdA', language='zh-CN')
+{% endhighlight %}
+
+博文中添加图片
+* 在本地仓库的根目录下新建图片文件夹img。将所需的图片保存至该文件夹下。
+![04](/img/2018-09-21-04.jpg)
+
+* md文件引用图片的语法
+{% highlight js%}
+![03](/img/2018-09-21-03.jpg) //[]内可以任意取名，()内即为图片路径
 {% endhighlight %}
 
 
-## 找到我的相应仓库，点击Settings，rename仓库名。
 
-这里我将pycharm下载并解压到了/home/snakeson/developer文件夹下
-
-这里的pycharm.sh是批处理执行文件，prcharm.png是快捷方式图标
-
-## 终端打开
-
-使用Ubuntu终端进行打开：
-方法一（使用vim）：
-```js
-sudo vi  /usr/share/applications/pycharm.desktop
-```
-
-方法二（使用gedit）：
-	
-```js
-sudo gedit  /usr/share/applications/pycharm.desktop
-```
-![01](assets/aa.jpg)
-
-
-
-然后就会弹出一个新框：
-## 张贴
-我们将下面的内容贴上去：
-```js
-
-[Desktop Entry]
-Type=Application
-Name=Pycharm
-GenericName=Pycharm3
-Comment=Pycharm3:The Python IDE
-Exec="/home/snakeson/developer/pycharm-community-2017.2.3/bin/pycharm.sh" %f
-Icon=/home/snakeson/developer/pycharm-community-2017.2.3/bin/pycharm.png
-Terminal=pycharm
-Categories=Pycharm;
-
-```
----
-注意一定要将Desktop Entry复制进去，也就是上面的全部都要复制进去，这里我们需要替换掉两个地方：**Exec="xx"**和**Icon=**,这里要替换掉我们的pycharm解压的目录，当然了，我已经替换好了，如果你的目录跟我的目录不一样的话，你得把路径给换了，不管你是pycharm2017还是pycharm2016,，例如Comment什么的都不要改变，只变上面提到的两个路径就可以了。
-
-
-## 添加可执行权限
-```js
-sudo chmod +x /usr/share/applications/pycharm.desktop
-```
-
-## 拷贝到桌面
-```js
-将/usr/share/applications/pycharm.desktop文件拷贝到桌面，双击即可运行。
-```

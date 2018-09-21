@@ -24,15 +24,18 @@
         &:hover {
             color: #223253;
             background-color: #f4efeb;
+			
         }
     }
     .left {
         ul {
             >h2 {
-                color: #333;
+                color: #99CCFF;
+				font-weight: bold;
+				font-family:"Times New Roman",Georgia;
             }
             li {
-                color: #333;
+                color: #99CCFF;
                 margin: 0;
             }
         }
