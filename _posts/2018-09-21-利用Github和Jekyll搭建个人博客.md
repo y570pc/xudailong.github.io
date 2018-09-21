@@ -1,20 +1,24 @@
 ---
 layout: post
-title:  "Ubuntu16.04设置Pycharm桌面快捷键"
-categories: SnakeSon
-tags:  Ubuntu Pycharm 
-author: SnakeSon
+title:  "利用Github和Jekyll搭建个人博客"
+categories: 网站搭建
+tags: Github Jekyll 
+author: y570pc
 ---
 
 * content
 {:toc}
 
-## Ubuntu下所有的快捷方式都在：
-```js
-/usr/share/applications
-```
+## Fork https://github.com/xudailong/xudailong.github.io（博客模板）到我的仓库（repository）
 
-## 解压
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+
+## 找到我的相应仓库，点击Settings，rename仓库名。
 
 这里我将pycharm下载并解压到了/home/snakeson/developer文件夹下
 
@@ -33,8 +37,7 @@ sudo vi  /usr/share/applications/pycharm.desktop
 ```js
 sudo gedit  /usr/share/applications/pycharm.desktop
 ```
-
-
+![有帮助的截图]({{ site.url }}/aa.jpg)
 
 
 
