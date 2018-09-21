@@ -7,9 +7,9 @@
 
 # Site settings
 title: 炎季宏的博客
-brief-intro: Android and Python Coder
+brief-intro: 致力于成为一名有钱、有理想的自由职业者！
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://643435675.github.io" # the base hostname & protocol for your site
+url: "https://y570pc.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 

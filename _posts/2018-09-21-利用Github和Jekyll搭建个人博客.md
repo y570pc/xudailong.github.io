@@ -37,7 +37,7 @@ sudo vi  /usr/share/applications/pycharm.desktop
 ```js
 sudo gedit  /usr/share/applications/pycharm.desktop
 ```
-![有帮助的截图](https://github.com/y570pc/y570pc.github.io/blob/master/assets/aa.jpg)
+![01](assets/aa.jpg)
 
 
 
