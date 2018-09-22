@@ -2,7 +2,7 @@
 layout: post
 title:  "利用Github和Jekyll搭建个人博客"
 categories: 网站搭建
-tags: Jekyll markdown 
+tags: jekyll markdown 
 author: y570pc
 ---
 
@@ -40,8 +40,9 @@ git push -u origin master
 4. 开启服务器，jekyll serve
 5. 浏览器访问http://localhost:4001/ 
 
+
 ## 样式微调
-代码高亮
+#### 代码高亮
 * 安装pygments
 {% highlight ruby%}
 gem install pygments.rb
@@ -73,7 +74,7 @@ with harvard as source:
 text = r.recognize_ibm(audio, username='b1c2ce4f-1420-4f49-82c5-ed73cfb320ec', password='BMLcTYAuPCdA', language='zh-CN')
 {% endhighlight %}
 
-博文中添加图片
+#### 博文中添加图片
 * 在本地仓库的根目录下新建图片文件夹img。将所需的图片保存至该文件夹下。
 ![04](/img/2018-09-21-04.jpg)
 
@@ -82,7 +83,7 @@ text = r.recognize_ibm(audio, username='b1c2ce4f-1420-4f49-82c5-ed73cfb320ec', p
 ![03](/img/2018-09-21-03.jpg) //[]内可以任意取名，()内即为图片路径
 {% endhighlight %}
 
-修改字体
+#### 修改字体
 * 在本地仓库的css文件夹下存放着main.scss文件。应该是修改全局样式的配置文件。对其进行修改。
 {% highlight js%}
 //修改前
@@ -91,4 +92,6 @@ base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 //修改后
 base-font-family: "Times New Roman",Georgia;
 {% endhighlight %}
+
+$\exp(-\frac{x^2}{2})$
 
