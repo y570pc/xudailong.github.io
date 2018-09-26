@@ -186,3 +186,12 @@ $$
 $$
 
 * 段内插入公式效果：公式$\exp(-\frac{x^2}{2})$
+
+#### 插入iframe
+* 插入iframe格式
+{% highlight html%}
+<iframe src="https://music.163.com/outchain/player?type=3&id=794070604&auto=1&height=66" width="500px" height="80px" frameborder="0" scrolling="no"> </iframe>
+{% endhighlight %}
+
+* 插入效果展示
+<iframe src="https://music.163.com/outchain/player?type=3&id=794070604&auto=1&height=66" width="500px" height="80px" frameborder="0" scrolling="no"> </iframe>
