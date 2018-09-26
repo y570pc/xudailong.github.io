@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RNASeq数据分析——以hisat2、htseq为例"
-categories: 网站搭建
+categories: 生信
 tags: ubuntu hisat2 htseq rnaseq 
 author: y570pc
 ---
